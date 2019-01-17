@@ -13,5 +13,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         String hola = "I want to fcking die";
+        String seppuku = "Im gonna commit seppuku";
     }
 }
