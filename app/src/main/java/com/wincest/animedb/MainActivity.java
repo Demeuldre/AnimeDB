@@ -14,5 +14,7 @@ public class MainActivity extends AppCompatActivity
 
         String hola = "I want to fcking die";
         String seppuku = "Im gonna commit seppuku";
+
+        String algo = "le portes hasn't arraived";
     }
 }
