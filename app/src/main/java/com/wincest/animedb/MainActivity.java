@@ -12,9 +12,5 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String hola = "I want to fcking die";
-        String seppuku = "Im gonna commit seppuku";
-
-        String algo = "le portes hasn't arraived";
     }
 }
