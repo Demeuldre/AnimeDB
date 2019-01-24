@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -27,15 +27,24 @@ public class MainActivity extends AppCompatActivity
                 switch(menuItem.getItemId()){
 
                     case R.id.nav_home:
-                        Toast.makeText(MainActivity.this, "Clicked Home", Toast.LENGTH_SHORT).show();
+
+                        Intent Home_Screen = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(Home_Screen);
+
                         break;
 
                     case R.id.nav_anime:
-                        Toast.makeText(MainActivity.this, "Clicked Anime", Toast.LENGTH_SHORT).show();
+
+                        Intent Series_Screen = new Intent(MainActivity.this, Series_List.class);
+                        startActivity(Series_Screen);
+
                         break;
 
                     case R.id.nav_manga:
-                        Toast.makeText(MainActivity.this, "Clicked Manga", Toast.LENGTH_SHORT).show();
+
+                        Intent Book_Screen = new Intent(MainActivity.this, BookList.class);
+                        startActivity(Book_Screen);
+
                         break;
                 }
 

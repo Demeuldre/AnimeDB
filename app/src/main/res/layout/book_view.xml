@@ -19,7 +19,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Name"
             tools:layout_editor_absoluteX="34dp"
             tools:layout_editor_absoluteY="65dp" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Autor" />
 
         <TextView
             android:id="@+id/textView4"
@@ -45,7 +45,7 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Chapters" />
 
         <TextView
             android:id="@+id/textView6"
@@ -57,7 +57,7 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Plot" />
 
         <TextView
             android:id="@+id/textView8"
