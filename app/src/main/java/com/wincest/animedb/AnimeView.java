@@ -3,7 +3,8 @@ package com.wincest.animedb;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class AnimeView extends AppCompatActivity {
+public class AnimeView extends AppCompatActivity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,5 +22,4 @@ public class AnimeView extends AppCompatActivity {
 
         //TODO cambiar layout de la pagina para un Grid, hacerlo mas bonito
     }
-
 }
