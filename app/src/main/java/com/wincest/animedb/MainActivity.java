@@ -20,11 +20,14 @@ public class MainActivity extends AppCompatActivity
 
         navView = findViewById(R.id.nav_menu);
 
-        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
+        {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+            {
 
-                switch(menuItem.getItemId()){
+                switch(menuItem.getItemId())
+                {
 
                     case R.id.nav_home:
 
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity
 
                     case R.id.nav_anime:
 
-                        Intent Series_Screen = new Intent(MainActivity.this, Series_List.class);
+                        Intent Series_Screen = new Intent(MainActivity.this, AnimeList.class);
                         startActivity(Series_Screen);
 
                         break;
@@ -45,5 +48,10 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //TODO Cargar la lista de animes guardados en favoritos
+
+        //TODO Evento click al seleccionar un elemento de la lista para abrir la ficha tecnica
+
+        //TODO mostrar miniatura del anime y el titulo
     }
 }

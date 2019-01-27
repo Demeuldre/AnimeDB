@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtboxName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            tools:text="AnimeName" />
+
+        <ImageView
+            android:id="@+id/imgAnime"
+            android:layout_width="149dp"
+            android:layout_height="159dp"
+            app:srcCompat="@android:color/holo_green_dark"
+            android:contentDescription="@string/imagenanime" />
+
+        <TextView
+            android:id="@+id/txtboxAutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            tools:text="Autor/s:" />
+
+        <TextView
+            android:id="@+id/txtboxEpisodes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Episodes:" />
+
+        <TextView
+            android:id="@+id/txtboxPlot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Plot" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

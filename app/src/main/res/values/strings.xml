@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AnimeDB</string>
+    <string name="my_series">My Series</string>
+    <string name="anime_list">Anime List</string>
+    <string name="imagenanime">imagenAnime</string>
 </resources>
