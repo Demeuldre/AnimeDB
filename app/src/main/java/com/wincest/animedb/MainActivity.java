@@ -1,16 +1,16 @@
 package com.wincest.animedb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity
 {
 
-    NavigationView navView;
+    private NavigationView navView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,13 +37,6 @@ public class MainActivity extends AppCompatActivity
 
                         Intent Series_Screen = new Intent(MainActivity.this, Series_List.class);
                         startActivity(Series_Screen);
-
-                        break;
-
-                    case R.id.nav_manga:
-
-                        Intent Book_Screen = new Intent(MainActivity.this, BookList.class);
-                        startActivity(Book_Screen);
 
                         break;
                 }
