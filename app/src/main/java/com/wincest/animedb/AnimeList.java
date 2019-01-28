@@ -38,7 +38,7 @@ public class AnimeList extends AppCompatActivity {
         //TODO cargar toda la lista de animes de la bd
         cargarRecyclerView();
 
-        new GetAllAnimes().execute();
+        new GetAllAnimes().execute(new DBConnector());
 
         //TODO crear evento click para abrir la pagina de la ficha tecnica de la serie
 
