@@ -4,7 +4,7 @@ public class Anime
 {
     private int idAnime;
     private int episodes;
-    private float rating;
+    private double rating;
     private boolean favourite;
     private String status;
     private String title;
@@ -13,7 +13,7 @@ public class Anime
     private String image;
 
     // Constructor
-    public Anime(int idAnime, int episodes, float rating, String title,
+    Anime(int idAnime, int episodes, double rating, String title,
                  String genres, String status, String synopsis, String image)
     {
         this.idAnime = idAnime;

@@ -16,11 +16,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AnimeList extends AppCompatActivity {
 
     // Array que almacenara la url de la imagen y el nombre del anime
-    private static ArrayList<String[]> animeList = new ArrayList<>();
+    private static ArrayList<Anime> animeList = new ArrayList<>();
 
     TextView seriesList;
     RecyclerView rvSeries;
@@ -35,6 +36,9 @@ public class AnimeList extends AppCompatActivity {
         rvSeries = findViewById(R.id.RecyclerSeries);
 
         //TODO cargar toda la lista de animes de la bd
+        cargarRecyclerView();
+
+        new GetAllAnimes().execute();
 
         //TODO crear evento click para abrir la pagina de la ficha tecnica de la serie
 
@@ -48,32 +52,37 @@ public class AnimeList extends AppCompatActivity {
     // Cargar el recycler view con la informacion de la base de datos
     private void cargarRecyclerView()
     {
-
-
-        rvSeries.setAdapter(recyclerAdapter.);
+        AnimeAdapter adapter = new AnimeAdapter(animeList);
+        rvSeries.setAdapter(adapter);
     }
 
 
     // Convierte el valor json devuelto de la pagina web en un ArrayList
     private static void jsonToArrayList(JSONArray jsonArray)
     {
-        String[] strings;
-
         for (int i = 0; i < jsonArray.length(); i++)
         {
-            // array temporal para almacenar los valores
-            strings = new String[2];
+            // objeto anime
+            Anime newAnime;
 
             JSONObject json;
             try
             {
                 json = jsonArray.getJSONObject(i);
 
-                // Obtener la imagen y el nombre del anime
-                strings[0] = json.getString("image");
-                strings[1] = json.getString("name");
+                // Obtener los datos del anime
+                int idAnime = json.getInt("idAnime");
+                int episodes = json.getInt("episodes");
+                double rating = json.getDouble("rating");
+                String title = json.getString("title");
+                String genres = json.getString("genre");
+                String status = json.getString("status");
+                String synopsis = json.getString("synopsis");
+                String image = json.getString("image");
 
-                animeList.add(strings);
+                newAnime = new Anime(idAnime, episodes, rating, title, genres, status, synopsis, image);
+
+                animeList.add(newAnime);
 
             } catch (JSONException e)
             {
