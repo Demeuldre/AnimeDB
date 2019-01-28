@@ -22,6 +22,7 @@ public class AnimeList extends AppCompatActivity {
 
     // Array que almacenara la url de la imagen y el nombre del anime
     private static ArrayList<Anime> animeList = new ArrayList<>();
+    private JSONArray jsonArray;
 
     TextView seriesList;
     RecyclerView rvSeries;
@@ -35,10 +36,11 @@ public class AnimeList extends AppCompatActivity {
         seriesList = findViewById(R.id.txtSeriesList);
         rvSeries = findViewById(R.id.RecyclerSeries);
 
+        jsonArray = new DBConnector().GetAllAnimes();
+        jsonToArrayList(jsonArray);
+
         //TODO cargar toda la lista de animes de la bd
         cargarRecyclerView();
-
-        new GetAllAnimes().execute(new DBConnector());
 
         //TODO crear evento click para abrir la pagina de la ficha tecnica de la serie
 
@@ -91,6 +93,7 @@ public class AnimeList extends AppCompatActivity {
         }
     }
 
+    /*
     // Obtener todos los animes de la BD
     private static class GetAllAnimes extends AsyncTask<DBConnector, Long, JSONArray>
     {
@@ -108,5 +111,5 @@ public class AnimeList extends AppCompatActivity {
             // pasa la informacion de los animes en una lista
             jsonToArrayList(jsonArray);
         }
-    }
+    } */
 }
