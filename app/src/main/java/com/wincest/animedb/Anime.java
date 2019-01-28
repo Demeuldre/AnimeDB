@@ -37,7 +37,7 @@ public class Anime
         return episodes;
     }
 
-    public float getRating()
+    public double getRating()
     {
         return rating;
     }
