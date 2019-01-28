@@ -17,7 +17,7 @@ public class DBConnector
 {
     public JSONArray GetAllAnimes()
     {
-        String url = "https://reptiloid-ice.000webhostapp.com/GetAllAnimes.php";
+        String url = "https://reptiloid-ice.000webhostapp.com/getAllAnimes.php";
 
         // Get HttpResponse Object from url
         // Get HttpEntity from Http Response object

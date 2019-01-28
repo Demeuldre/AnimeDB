@@ -1,14 +1,9 @@
 package com.wincest.animedb;
 
-import android.database.DataSetObserver;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -16,13 +11,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AnimeList extends AppCompatActivity {
 
     // Array que almacenara la url de la imagen y el nombre del anime
     private static ArrayList<Anime> animeList = new ArrayList<>();
-    private JSONArray jsonArray;
+    private static JSONArray jsonArray;
 
     TextView seriesList;
     RecyclerView rvSeries;
@@ -36,7 +30,7 @@ public class AnimeList extends AppCompatActivity {
         seriesList = findViewById(R.id.txtSeriesList);
         rvSeries = findViewById(R.id.RecyclerSeries);
 
-        jsonArray = new DBConnector().GetAllAnimes();
+        jsonArray = new ApiConnector().getAllAnimes();
         jsonToArrayList(jsonArray);
 
         //TODO cargar toda la lista de animes de la bd
@@ -93,16 +87,18 @@ public class AnimeList extends AppCompatActivity {
         }
     }
 
-    /*
+
     // Obtener todos los animes de la BD
-    private static class GetAllAnimes extends AsyncTask<DBConnector, Long, JSONArray>
+    private static class GetAllAnimes extends AsyncTask<ApiConnector, Long, JSONArray>
     {
 
         @Override
-        protected JSONArray doInBackground(DBConnector... dbConnectors)
+        protected JSONArray doInBackground(ApiConnector... apiConnectors)
         {
             // Ejecuta la obtencion de los animes en un thread en background
-            return dbConnectors[0].GetAllAnimes();
+            jsonArray = apiConnectors[0].getAllAnimes();
+
+            return jsonArray;
         }
 
         @Override
@@ -111,5 +107,5 @@ public class AnimeList extends AppCompatActivity {
             // pasa la informacion de los animes en una lista
             jsonToArrayList(jsonArray);
         }
-    } */
+    }
 }
