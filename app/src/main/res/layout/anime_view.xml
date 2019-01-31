@@ -1,52 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/txtboxStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="57dp"
+        android:text="Status: "
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAnime"
+        app:layout_constraintTop_toBottomOf="@+id/txtboxEpisodes"
+        tools:text="Status: " />
+
+    <TextView
+        android:id="@+id/txtboxEpisodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="27dp"
+        android:text="Episodes: "
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAnime"
+        app:layout_constraintTop_toBottomOf="@+id/txtboxGenreTypes"
+        tools:text="Episodes: " />
+
+    <TextView
+        android:id="@+id/txtboxGenres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="8dp"
+        android:text="Genres:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxGenreTypes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAnime"
+        app:layout_constraintTop_toBottomOf="@+id/txtboxRating"
+        tools:text="Genres: " />
+
+    <TextView
+        android:id="@+id/txtboxGenreTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="17dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxEpisodes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAnime"
+        app:layout_constraintTop_toBottomOf="@+id/txtboxGenres"
+        tools:text="Example Text" />
+
+    <TextView
+        android:id="@+id/txtboxRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="13dp"
+        android:text="Rating: "
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxGenres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAnime"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Rating: " />
+
+    <ImageView
+        android:id="@+id/imgAnime"
+        android:layout_width="175dp"
+        android:layout_height="250dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="ImageAnime"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxTitle"
+        app:layout_constraintEnd_toStartOf="@+id/txtboxStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/holo_green_dark" />
+
+    <TextView
+        android:id="@+id/txtboxPlot"
+        android:layout_width="359dp"
+        android:layout_height="402dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="28dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/txtboxTitle"
+        tools:text="Example Text" />
 
-        <TextView
-            android:id="@+id/txtboxName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            tools:text="AnimeName" />
+    <TextView
+        android:id="@+id/txtboxTitle"
+        android:layout_width="362dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="17dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtboxPlot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAnime"
+        tools:text="Title" />
 
-        <ImageView
-            android:id="@+id/imgAnime"
-            android:layout_width="149dp"
-            android:layout_height="159dp"
-            app:srcCompat="@android:color/holo_green_dark"
-            android:contentDescription="@string/imagenanime" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-54dp" />
 
-        <TextView
-            android:id="@+id/txtboxAutor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            tools:text="Autor/s:" />
-
-        <TextView
-            android:id="@+id/txtboxEpisodes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Episodes:" />
-
-        <TextView
-            android:id="@+id/txtboxPlot"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Plot" />
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
