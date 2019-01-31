@@ -16,6 +16,5 @@ public class MainActivity extends AppCompatActivity
 
         //TODO Evento click al seleccionar un elemento de la lista para abrir la ficha tecnica
 
-        //TODO mostrar miniatura del anime y el titulo
     }
 }
