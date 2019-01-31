@@ -24,53 +24,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
-    // Objeto POJO que representa un anime
-    public class Anime implements Serializable
-    {
-        private int idAnime, episodes;
-        private double rating;
-        private boolean favorite;
-        private String title, genres, imageURL, synopsis, status;
-
-        public Anime(int idAnime, String title, String genres, String imageURL)
-        {
-            this.idAnime = idAnime;
-            this.title = title;
-            this.genres = genres;
-            this.imageURL = imageURL;
-        }
-
-        public Anime(int idAnime, String title, String genres, String imageURL, String synopsis, int episodes, String status, double rating, int favorite)
-        {
-            this.idAnime = idAnime;
-            this.title = title;
-            this.genres = genres;
-            this.imageURL = imageURL;
-            this.synopsis = synopsis;
-            this.episodes = episodes;
-            this.status = status;
-            this.rating = rating;
-
-            // Set favourite value
-            this.favorite = favorite != 0;
-        }
-
-        public int getIdAnime()     { return idAnime; }
-        public String getTitle()    { return title; }
-        public String getGenres()   { return genres; }
-        public String getImageURL() { return imageURL; }
-        public int getEpisodes()    { return episodes; }
-        public double getRating()   { return rating; }
-        public boolean isFavorite() { return favorite; }
-        public String getSynopsis() { return synopsis; }
-        public String getStatus()   { return status; }
-    }
-
     // Adapter para el ListView
     public class ListViewAdapter extends BaseAdapter
     {
@@ -110,7 +67,7 @@ public class MainActivity extends AppCompatActivity
             TextView animeGenres = view.findViewById(R.id.animeGenresTextView);
             ImageView animeImage = view.findViewById(R.id.animeImageView);
 
-            final Anime anime = (Anime) getItem(position);
+            Anime anime = (Anime) getItem(position);
 
             animeName.setText(anime.getTitle());
             animeGenres.setText(anime.getGenres());
@@ -118,7 +75,7 @@ public class MainActivity extends AppCompatActivity
             // Cargar la imagen del anime
             if (anime.getImageURL() != null && anime.getImageURL().length() > 0)
             {
-                Picasso.get().load(anime.imageURL).placeholder(R.drawable.placeholder).into(animeImage);
+                Picasso.get().load(anime.getImageURL()).placeholder(R.drawable.placeholder).into(animeImage);
 
             } else
             {
