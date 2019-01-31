@@ -130,10 +130,7 @@ public class MainActivity extends AppCompatActivity
             view.setOnClickListener(v ->
             {
                 Intent intent = new Intent(MainActivity.this, AnimeView.class);
-                Bundle bundle = new Bundle();
-
-                bundle.putSerializable("anime", anime);
-                intent.putExtras(bundle);
+                intent.putExtra("anime", anime);
 
                 startActivity(intent);
             });
