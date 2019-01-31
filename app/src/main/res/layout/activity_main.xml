@@ -15,17 +15,10 @@
             android:id="@+id/txtAnime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/my_series"
+            android:text="@string/anime_list"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/AnimeList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 
