@@ -11,5 +11,8 @@ public class AnimeView extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anime_view);
+
+        // Obtener el objeto anime
+        Anime anime = (Anime) getIntent().getSerializableExtra("anime");
     }
 }
