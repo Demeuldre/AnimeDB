@@ -1,6 +1,7 @@
 package com.wincest.animedb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -23,12 +24,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
     // Objeto POJO que representa un anime
-    public class Anime
+    public class Anime implements Serializable
     {
         private int idAnime, episodes;
         private double rating;
@@ -127,7 +129,13 @@ public class MainActivity extends AppCompatActivity
             //TODO Evento para abrir el anime en el AnimeView
             view.setOnClickListener(v ->
             {
-                Toast.makeText(c, "Abrir la pagina con los detalles del anime", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, AnimeView.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putSerializable("anime", anime);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
             });
 
             return view;
