@@ -99,13 +99,9 @@ public class MainActivity extends AppCompatActivity
         public View getView(int position, View view, ViewGroup viewGroup)
         {
             // inflamos el layout en el ListView
-            if (view != null)
+            if (view == null)
             {
                 view = LayoutInflater.from(c).inflate(R.layout.row_model, viewGroup, false);
-
-            } else
-            {
-                return null;
             }
 
             TextView animeName = view.findViewById(R.id.animeNameTextView);
@@ -180,7 +176,7 @@ public class MainActivity extends AppCompatActivity
                                     String imageURL = jsonObject.getString("image");
                                     String synopsis = jsonObject.getString("synopsis");
                                     int episodes = jsonObject.getInt("episodes");
-                                    String status = jsonObject.getString("STATUS");
+                                    String status = jsonObject.getString("satus");
                                     double rating = jsonObject.getDouble("rating");
                                     int favorite = jsonObject.getInt("favorite");
 
