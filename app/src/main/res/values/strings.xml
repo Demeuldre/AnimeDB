@@ -2,4 +2,6 @@
     <string name="app_name">AnimeDB</string>
     <string name="anime_list">Anime List</string>
     <string name="imagenanime">imagenAnime</string>
+    <string name="anime_name">Anime Name</string>
+    <string name="genres_list">Genres list...</string>
 </resources>
