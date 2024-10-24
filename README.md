@@ -29,7 +29,6 @@
 - [ Overview](#-overview)
 - [ Features](#-features)
 - [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
 - [ Getting Started](#-getting-started)
     - [ Prerequisites](#-prerequisites)
     - [ Installation](#-installation)
@@ -51,12 +50,12 @@
 
 ##  Features
 <ul>
-	<li>**Anime List Display:**Browse through a list of anime series with detailed information such as title, genres, episodes, status, and rating.</li>
-	<li>**Anime Details View:**Each anime entry includes a high-quality image, synopsis, and additional details like the number of episodes and the anime’s current status (ongoing or completed).</li>
-	<li>**Favorites Management:** Users can mark anime as favorites for quicker access, with favorite status saved within the app.</li>
-	<li>**Seamless Image Loading:** Anime images are loaded dynamically from a remote source using the Picasso library, with a fallback placeholder for missing images.</li>
-	<li>**Responsive UI:** The app is optimized to provide a smooth user experience with a custom list view and dynamic content loading through a progress bar.</li>
-	<li>**Real-time Data Retrieval:** The app fetches anime data from a remote server, ensuring that the information is up-to-date, and handles JSON responses efficiently.</li>
+	<li><b>Anime List Display:</b>Browse through a list of anime series with detailed information such as title, genres, episodes, status, and rating.</li>
+	<li><b>Anime Details View:</b>Each anime entry includes a high-quality image, synopsis, and additional details like the number of episodes and the anime’s current status (ongoing or completed).</li>
+	<li><b>Favorites Management:</b> Users can mark anime as favorites for quicker access, with favorite status saved within the app.</li>
+	<li><b>Seamless Image Loading:</b> Anime images are loaded dynamically from a remote source using the Picasso library, with a fallback placeholder for missing images.</li>
+	<li><b>Responsive UI:</b> The app is optimized to provide a smooth user experience with a custom list view and dynamic content loading through a progress bar.</li>
+	<li><b>Real-time Data Retrieval:</b> The app fetches anime data from a remote server, ensuring that the information is up-to-date, and handles JSON responses efficiently.</li>
 </ul>
  
  
@@ -81,55 +80,6 @@
     ├── gradlew.bat
     └── settings.gradle
 ```
-
----
-
-##  Modules
-
-<details closed><summary>.</summary>
-
-| File | Summary |
-| --- | --- |
-| [gradlew.bat](https://github.com/Demeuldre/AnimeDB/blob/main/gradlew.bat) | <code>❯ REPLACE-ME</code> |
-| [build.gradle](https://github.com/Demeuldre/AnimeDB/blob/main/build.gradle) | <code>❯ REPLACE-ME</code> |
-| [settings.gradle](https://github.com/Demeuldre/AnimeDB/blob/main/settings.gradle) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>app</summary>
-
-| File | Summary |
-| --- | --- |
-| [proguard-rules.pro](https://github.com/Demeuldre/AnimeDB/blob/main/app/proguard-rules.pro) | <code>❯ REPLACE-ME</code> |
-| [build.gradle](https://github.com/Demeuldre/AnimeDB/blob/main/app/build.gradle) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>app.src.main.java.com.wincest.animedb</summary>
-
-| File | Summary |
-| --- | --- |
-| [Anime.java](https://github.com/Demeuldre/AnimeDB/blob/main/app/src/main/java/com/wincest/animedb/Anime.java) | <code>❯ REPLACE-ME</code> |
-| [MainActivity.java](https://github.com/Demeuldre/AnimeDB/blob/main/app/src/main/java/com/wincest/animedb/MainActivity.java) | <code>❯ REPLACE-ME</code> |
-| [AnimeView.java](https://github.com/Demeuldre/AnimeDB/blob/main/app/src/main/java/com/wincest/animedb/AnimeView.java) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>app.src.androidTest.java.com.wincest.animedb</summary>
-
-| File | Summary |
-| --- | --- |
-| [ExampleInstrumentedTest.java](https://github.com/Demeuldre/AnimeDB/blob/main/app/src/androidTest/java/com/wincest/animedb/ExampleInstrumentedTest.java) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>app.src.test.java.com.wincest.animedb</summary>
-
-| File | Summary |
-| --- | --- |
-| [ExampleUnitTest.java](https://github.com/Demeuldre/AnimeDB/blob/main/app/src/test/java/com/wincest/animedb/ExampleUnitTest.java) | <code>❯ REPLACE-ME</code> |
-
-</details>
 
 ---
 
