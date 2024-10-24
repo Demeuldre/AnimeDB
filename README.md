@@ -44,13 +44,22 @@
 
 ##  Overview
 
-<code>❯ REPLACE-ME</code>
+<p>This project is an Android application that provides a streamlined anime database for users to browse, view, and manage their favorite anime shows. The app connects to a remote server to retrieve detailed information about various anime series, including their titles, genres, episodes, and more. Users can explore the database, view anime images and summaries, and mark their favorite shows for easy access. The app is designed with an intuitive interface, ensuring that users can quickly find the content they are interested in.
+</p>
 
 ---
 
 ##  Features
-
-<code>❯ REPLACE-ME</code>
+<ul>
+	<li>**Anime List Display:**Browse through a list of anime series with detailed information such as title, genres, episodes, status, and rating.</li>
+	<li>**Anime Details View:**Each anime entry includes a high-quality image, synopsis, and additional details like the number of episodes and the anime’s current status (ongoing or completed).</li>
+	<li>**Favorites Management:** Users can mark anime as favorites for quicker access, with favorite status saved within the app.</li>
+	<li>**Seamless Image Loading:** Anime images are loaded dynamically from a remote source using the Picasso library, with a fallback placeholder for missing images.</li>
+	<li>**Responsive UI:** The app is optimized to provide a smooth user experience with a custom list view and dynamic content loading through a progress bar.</li>
+	<li>**Real-time Data Retrieval:** The app fetches anime data from a remote server, ensuring that the information is up-to-date, and handles JSON responses efficiently.</li>
+</ul>
+ 
+ 
 
 ---
 
